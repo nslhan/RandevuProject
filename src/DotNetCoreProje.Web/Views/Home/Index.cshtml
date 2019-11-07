@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+   
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/grayscale.min.css" rel="stylesheet">
+    <link href="~/css/grayscale.css" rel="stylesheet">
+    <link href="~/js/grayscale.js" rel="stylesheet">
+    <link href="~/js/grayscale.min.js" rel="stylesheet">
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Photography</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Ücretsiz fiyat  teklifi ve tanışmak için randevu alınız...</h2>
+                @*<a class="btn btn-outline-danger" data-toggle="modal" data-target="#modalLoginForm">Randevu Almak İçin Tıklayınız</a>*@
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                    Randevu Almak İçin Tıklayınız
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Bilgileriniz</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="Adınız ve Soyadınız">
+                            </div>
+
+                            @* Çekim kategorisi *@
+                            <div class="modal-body">
+                                <input class="form-control" type="text" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Çekim Kategorisi Seçiniz">
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item" href="#">Düğün Fotoğrafı</a>
+                                    <a class="dropdown-item" href="#">Nişan Fotoğrafı</a>
+                                    <a class="dropdown-item" href="#">Ürün Fotoğrafı</a>
+                                    <a class="dropdown-item" href="#">Moda Fotoğrafı</a>
+                                </div>
+                            </div>
+                            @* bitiş çekim kategorisi *@
+
+                            @* Date *@
+                            <div class="md-form">
+                                <label for="inputMDEx">Tarih Seçiniz</label>
+                                <input type="date" id="inputMDEx" class="form-control">
+                            </div>
+
+                            <hr />
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                                <button type="button" class="btn btn-warning">Kaydet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            </div>
+        </div>
+    </header>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+        <div class="container">
+
+            <!-- Featured Project Row -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" src="~/img/weddings.jpg" alt="">
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>Düğün Fotoğrafçılığı</h4>
+                        <p class="text-black-50 mb-0">Düğün hikayesi, düğün günü sabah kuaför hazırlıklarından başlayarak düğüne ya da düğünün sonuna kadar olan sürecin doğal bir şekilde video ve fotoğraflarla kurgulandığı düğün filmine verilen isimdir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project One Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="~/img/3170-kemal-seckin-yemek-ve-urun-fotograflari-hande-cakmak-taki.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Ürün Fotoğrafçılığı</h4>
+                                <p class="mb-0 text-white-50">Ürün çekim çadırı ürün çekiminde kullanılacak malzemelerden biridir. Farklı renklerde fonlar ve küp halinde açılan beyaz bir bez ürün çekimi için gerekli… Ürün çekimi yapılacağı için ürünü ön plana çıkarmak temel hedefimiz.</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Two Row -->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="~/img/womens-desk.jpg" alt="">
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Moda Fotoğrafçılığı</h4>
+                                <p class="mb-0 text-white-50">Giyilen kıyafeti ve diğer moda öğelerini ön plana çıkarmak için yapılan çekimler moda fotoğrafı olarak adlandırılır. Bu branşa da moda fotoğrafçılığı denir.</p>
+                                <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    @*<div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <h1>Giriş Yaptiniz.</h1>
+            }
+        </div>*@
